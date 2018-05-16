@@ -1,5 +1,6 @@
 class Song 
   
+<<<<<<< HEAD
   attr_accessor :name, :artist
   
   def initialize(name)
@@ -18,4 +19,24 @@ class Song
     new_song
   end
   
+=======
+  attr_accessor :name, :artist 
+  
+  def initialize(name)
+    @name = name
+    @artist = artist
+  end
+  
+  def artist_name
+    if self.artist 
+      self.artist.name
+    else
+      nil 
+    end
+  end
+  
+  def self.new_by_filename(files)
+    song = Song.new(files).remove(//)
+  end
+>>>>>>> 0cdb1633cd1711f7c7a2ce76678e5db7a9bd645b
 end
